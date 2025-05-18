@@ -10,7 +10,7 @@ include 'db.php'; // Include your database connection file
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Joe Shop</title>
 	<link rel="stylesheet" href="css/login.css"/>
-   <script src="js/script.js" defer></script>	
+   <script src="js/login.js" defer></script>	
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 </head>
 
