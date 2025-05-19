@@ -120,9 +120,6 @@
             <li class="cat-list-item">
               <a href="#" title="Speakers">Speakers</a>
             </li>
-            <li class="cat-list-item">
-              <a href="#" title="Memory Cards">Memory Cards</a>
-            </li>
           </ul>
 
         </div>
@@ -166,35 +163,6 @@
                 <li class="nav-item">
                   <a class="nav-link me-4" href="#latest-blog">Blog</a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link me-4 dropdown-toggle link-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Pages</a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="about.html" class="dropdown-item">About</a>
-                    </li>
-                    <li>
-                      <a href="blog.html" class="dropdown-item">Blog</a>
-                    </li>
-                    <li>
-                      <a href="shop.html" class="dropdown-item">Shop</a>
-                    </li>
-                    <li>
-                      <a href="cart.html" class="dropdown-item">Cart</a>
-                    </li>
-                    <li>
-                      <a href="checkout.html" class="dropdown-item">Checkout</a>
-                    </li>
-                    <li>
-                      <a href="single-post.html" class="dropdown-item">Single Post</a>
-                    </li>
-                    <li>
-                      <a href="single-product.html" class="dropdown-item">Single Product</a>
-                    </li>
-                    <li>
-                      <a href="contact.html" class="dropdown-item">Contact</a>
-                    </li>
-                  </ul>
-                </li>
                 <li class="nav-item">
                   <div class="user-items ps-5">
                     <ul class="d-flex justify-content-end list-unstyled">
@@ -237,7 +205,7 @@
                 <div class="col-md-6">
                   <div class="banner-content">
                     <h1 class="display-2 text-uppercase text-dark pb-5">Your Products Are Great.</h1>
-                    <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Product</a>
+                    <a href="cart.php" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Product</a>
                   </div>
                 </div>
                 <div class="col-md-5">
@@ -254,7 +222,7 @@
                 <div class="col-md-6">
                   <div class="banner-content">
                     <h1 class="display-2 text-uppercase text-dark pb-5">Technology Hack You Won't Get</h1>
-                    <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Product</a>
+                    <a href="cart.php" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Product</a>
                   </div>
                 </div>
                 <div class="col-md-5">
@@ -266,16 +234,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="swiper-icon swiper-arrow swiper-arrow-prev">
-        <svg class="chevron-left">
-          <use xlink:href="#chevron-left" />
-        </svg>
-      </div>
-      <div class="swiper-icon swiper-arrow swiper-arrow-next">
-        <svg class="chevron-right">
-          <use xlink:href="#chevron-right" />
-        </svg>
       </div>
     </section>
     <section id="company-services" class="padding-large">

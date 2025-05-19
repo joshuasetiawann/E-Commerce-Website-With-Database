@@ -109,13 +109,7 @@ INSERT INTO `tb_product` (`product_id`, `category_id`, `product_name`, `product_
 (20, 10, 'brokoli', 30000, '<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>\r\n\r\n<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>\r\n\r\n<p>per plastiiik</p>\r\n', 'produk1589853498.png', 1, '2020-05-19 01:58:18'),
 (21, 10, 'sayur kol langsung dari petani terpercaya dan ternama oke mantep', 40000, '<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>\r\n\r\n<p>per lembar</p>\r\n', 'produk1589853518.png', 1, '2020-05-19 01:58:38');
 
---
--- Indexes for dumped tables
---
 
---
--- Indexes for table `tb_admin`
---
 ALTER TABLE `tb_admin`
   ADD PRIMARY KEY (`admin_id`);
 

@@ -1,6 +1,47 @@
 <?php
 session_start();
-include 'db.php'; // Include your database connection file
+include 'db.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'register') {
+    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = md5($_POST['password']); // For compatibility with your SQL
+    $admin_name = $username; // You can add a field for name if you want
+    $admin_telp = '';
+    $admin_address = '';
+
+    // Check if username or email exists
+    $check = mysqli_query($conn, "SELECT * FROM users WHERE username='$username' OR admin_email='$email'");
+    if (mysqli_num_rows($check) > 0) {
+        echo "<script>alert('Username or Email already exists!'); window.location='login.php';</script>";
+        exit;
+    }
+
+    $insert = mysqli_query($conn, "INSERT INTO users (admin_name, username, password, admin_telp, admin_email, admin_address) VALUES ('$admin_name', '$username', '$password', '$admin_telp', '$email', '$admin_address')");
+    if ($insert) {
+        echo "<script>alert('Sign up successful! Please sign in.'); window.location='dashboard.php';</script>";
+        exit;
+    } else {
+        echo "<script>alert('Sign up failed!'); window.location='login.php';</script>";
+        exit;
+    }
+}
+
+// SIGN IN
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'login') {
+    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    $password = md5($_POST['password']);
+
+    $query = mysqli_query($conn, "SELECT * FROM users WHERE username='$username' AND password='$password'");
+    if (mysqli_num_rows($query) > 0) {
+        $_SESSION['login'] = true;
+        $_SESSION['username'] = $username;
+        echo "<script>alert('Login successful!'); window.location='dashboard.php';</script>";
+        exit;
+    } else {
+        echo "<script>alert('Login failed! Username or password incorrect.'); window.location='login.php';</script>";
+        exit;
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -13,56 +54,48 @@ include 'db.php'; // Include your database connection file
    <script src="js/login.js" defer></script>	
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 </head>
+</html>
 
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $action = $_POST['action'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'register') {
+    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = md5($_POST['password']); // For compatibility with your SQL
+    $admin_name = $username; // You can add a field for name if you want
+    $admin_telp = '';
+    $admin_address = '';
 
-    if ($action === 'register') {
-        // Handle user registration
-        $username = mysqli_real_escape_string($conn, $_POST['username']);
-        $email = mysqli_real_escape_string($conn, $_POST['email']);
-        $password = mysqli_real_escape_string($conn, $_POST['password']);
-        $confirm_password = mysqli_real_escape_string($conn, $_POST['confirm_password']);
+    // Check if username or email exists
+    $check = mysqli_query($conn, "SELECT * FROM users WHERE username='$username' OR admin_email='$email'");
+    if (mysqli_num_rows($check) > 0) {
+        echo "<script>alert('Username or Email already exists!'); window.location='login.php';</script>";
+        exit;
+    }
 
-        if ($password !== $confirm_password) {
-            echo "<script>alert('Passwords do not match!'); window.location.href='login.php';</script>";
-            exit;
-        }
+    $insert = mysqli_query($conn, "INSERT INTO users (admin_name, username, password, admin_telp, admin_email, admin_address) VALUES ('$admin_name', '$username', '$password', '$admin_telp', '$email', '$admin_address')");
+    if ($insert) {
+        echo "<script>alert('Sign up successful! Please sign in.'); window.location='login.php';</script>";
+        exit;
+    } else {
+        echo "<script>alert('Sign up failed!'); window.location='login.php';</script>";
+        exit;
+    }
+}
 
-        // Hash the password
-        $hashed_password = password_hash($password, PASSWORD_BCRYPT);
+// SIGN IN
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'login') {
+    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    $password = md5($_POST['password']);
 
-        // Insert user into the database
-        $query = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashed_password')";
-        if (mysqli_query($conn, $query)) {
-            echo "<script>alert('Registration successful!'); window.location.href='login.php';</script>";
-        } else {
-            echo "<script>alert('Error: " . mysqli_error($conn) . "'); window.location.href='login.php';</script>";
-        }
-    } elseif ($action === 'login') {
-        // Handle user login
-        $username = mysqli_real_escape_string($conn, $_POST['username']);
-        $password = mysqli_real_escape_string($conn, $_POST['password']);
-
-        // Fetch user from the database
-        $query = "SELECT * FROM users WHERE username = '$username'";
-        $result = mysqli_query($conn, $query);
-
-        if (mysqli_num_rows($result) > 0) {
-            $user = mysqli_fetch_assoc($result);
-
-            // Verify the password
-            if (password_verify($password, $user['password'])) {
-                $_SESSION['user_id'] = $user['id'];
-                $_SESSION['username'] = $user['username'];
-                echo "<script>alert('Login successful!'); window.location.href='dashboard.php';</script>";
-            } else {
-                echo "<script>alert('Invalid password!'); window.location.href='login.php';</script>";
-            }
-        } else {
-            echo "<script>alert('User not found!'); window.location.href='login.php';</script>";
-        }
+    $query = mysqli_query($conn, "SELECT * FROM users WHERE username='$username' AND password='$password'");
+    if (mysqli_num_rows($query) > 0) {
+        $_SESSION['login'] = true;
+        $_SESSION['username'] = $username;
+        echo "<script>alert('Login successful!'); window.location='dashboard.php';</script>";
+        exit;
+    } else {
+        echo "<script>alert('Login failed! Username or password incorrect.'); window.location='login.php';</script>";
+        exit;
     }
 }
 ?>

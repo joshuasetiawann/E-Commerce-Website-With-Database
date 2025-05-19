@@ -7,7 +7,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Joe Shop</title>
+	<title>Bukawarung</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 	<script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
@@ -16,7 +16,7 @@
 	<!-- header -->
 	<header>
 		<div class="container">
-			<h1><a href="dashboard.php">Joe Shop</a></h1>
+			<h1><a href="dashboard.php">Bukawarung</a></h1>
 			<ul>
 				<li><a href="dashboard.php">Dashboard</a></li>
 				<li><a href="profil.php">Profil</a></li>
@@ -56,6 +56,9 @@
 				</form>
 				<?php 
 					if(isset($_POST['submit'])){
+
+						// print_r($_FILES['gambar']);
+						// menampung inputan dari form
 						$kategori 	= $_POST['kategori'];
 						$nama 		= $_POST['nama'];
 						$harga 		= $_POST['harga'];
@@ -99,7 +102,7 @@
 								echo '<script>alert("Tambah data berhasil")</script>';
 								echo '<script>window.location="data-produk.php"</script>';
 							}else{
-								echo 'gagal '.mysqli_error(mysql: $conn);
+								echo 'gagal '.mysqli_error($conn);
 							}
 
 						}
@@ -115,7 +118,7 @@
 	<!-- footer -->
 	<footer>
 		<div class="container">
-			<small>Copyright &copy; 2025 - Joshua Setiawan.</small>
+			<small>Copyright &copy; 2020 - Bukawarung.</small>
 		</div>
 	</footer>
 	<script>
