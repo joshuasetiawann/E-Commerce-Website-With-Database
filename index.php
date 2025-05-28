@@ -300,10 +300,10 @@
           <div class="display-header d-flex justify-content-between pb-3">
             <h2 class="display-7 text-dark text-uppercase">Mobile Products</h2>
             <div class="btn-right">
-              <a href="shop.html" class="btn btn-medium btn-normal text-uppercase">Go to Shop</a>
+              <a href="cart.php" class="btn btn-medium btn-normal text-uppercase">Go to Shop</a>
             </div>
           </div>
-          <div class="swiper product-swiper">
+          <div class="swiper product-swiper"> 
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="product-card position-relative">
@@ -407,7 +407,7 @@
           <div class="display-header d-flex justify-content-between pb-3">
             <h2 class="display-7 text-dark text-uppercase">Smart Watches</h2>
             <div class="btn-right">
-              <a href="shop.html" class="btn btn-medium btn-normal text-uppercase">Go to Shop</a>
+              <a href="cart.php" class="btn btn-medium btn-normal text-uppercase">Go to Shop</a>
             </div>
           </div>
           <div class="swiper product-watch-swiper">
@@ -514,7 +514,7 @@
           <div class="text-content offset-4 padding-medium">
             <h3>10% off</h3>
             <h2 class="display-2 pb-5 text-uppercase text-dark">New year sale</h2>
-            <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Sale</a>
+            <a href="cart.php" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Sale</a>
           </div>
         </div>
         <div class="col-md-6 col-sm-12">
@@ -724,7 +724,7 @@
               </a>
             </figure>
             <figure class="instagram-item pe-2">
-              <a href="https://templatesjungle.com/" class="image-link position-relative">
+              <a href="http://instagram.com/jshuuastwn" class="image-link position-relative">
                 <img src="images/insta-item4.jpg" alt="instagram" class="insta-image">
                 <div class="icon-overlay position-absolute d-flex justify-content-center">
                   <svg class="instagram">
@@ -755,7 +755,7 @@
               <div class="col-lg-3 col-sm-6 pb-3">
                 <div class="footer-menu">
                   <img src="images/main-logo.png" alt="logo">
-                  <p>Nisi, purus vitae, ultrices nunc. Sit ac sit suscipit hendrerit. Gravida massa volutpat aenean odio erat nullam fringilla.</p>
+                  <p>Memberikan kualitas yang terbaik dan harga yang terjangkau.</p>
                   <div class="social-links">
                     <ul class="d-flex list-unstyled">
                       <li>
@@ -766,7 +766,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="http://instagram.com/jshuuastwn">
                           <svg class="instagram">
                             <use xlink:href="#instagram" />
                           </svg>
@@ -844,9 +844,9 @@
               <div class="col-lg-3 col-sm-6 pb-3">
                 <div class="footer-menu contact-item">
                   <h5 class="widget-title text-uppercase pb-2">Contact Us</h5>
-                  <p>Do you have any queries or suggestions? <a href="mailto:">yourinfo@gmail.com</a>
+                  <p>Do you have any queries or suggestions? <a href="mailto:">joshua.setiawan29@gmail.com</a>
                   </p>
-                  <p>If you need support? Just give us a call. <a href="">+55 111 222 333 44</a>
+                  <p>If you need support? Just give us a call. <a href="">+62 912 9057 1507 </a>
                   </p>
                 </div>
               </div>
@@ -880,7 +880,7 @@
           </div>
           <div class="col-md-4 col-sm-6">
             <div class="copyright">
-              <p>© Copyright 2023 MiniStore. Design by <a href="https://templatesjungle.com/">TemplatesJungle</a> Distribution by <a href="https://themewagon.com">ThemeWagon</a>
+              <p>© Copyright 2023 MiniStore. Design by <a href="https://templatesjungle.com/">Joshua</a> Distribution by <a href="https://instagram/jshuuastwn">Joshua Setiawan</a>
               </p>
             </div>
           </div>
