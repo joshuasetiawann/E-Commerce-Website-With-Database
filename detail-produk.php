@@ -43,9 +43,9 @@
                     <p>Deskripsi :<br>
                         <?php echo $p->product_description ?>
                     </p>
-                    <p>
+                    <p>   Hubungi via Whatsapp
                         <a href="https://api.whatsapp.com/send?phone=<?php echo $a->admin_telp ?>&text=Hai, saya tertarik dengan produk Anda." target="_blank">
-                            Hubungi via Whatsapp
+                         <br>
                             <img src="img/wa.png" width="50px">
                         </a>
                     </p>

@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     if (mysqli_num_rows($query) > 0) {
         $_SESSION['login'] = true;
         $_SESSION['username'] = $username;
-        echo "<script>alert('Login successful!'); window.location='dashboard.php';</script>";
+        echo "<script>alert('Login successful!'); window.location='login.php';</script>";
         exit;
     } else {
         echo "<script>alert('Login failed! Username or password incorrect.'); window.location='login.php';</script>";

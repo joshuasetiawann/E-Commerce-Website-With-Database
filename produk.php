@@ -64,7 +64,7 @@
 	<!-- footer -->
 	<div class="footer">
 		<div class="container">
-			<small>Copyright &copy; 2025 - Joe Shop.</small>
+			<small>Copyright &copy; 2025 - Joshua.</small>
 		</div>
 	</div>
 </body>

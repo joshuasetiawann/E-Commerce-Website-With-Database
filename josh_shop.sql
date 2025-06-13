@@ -39,6 +39,20 @@ CREATE TABLE `tb_product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
+CREATE TABLE `tb_cart_items` (
+  `cart_item_id` INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `user_id` INT(11) NOT NULL, -- Ini akan mengacu ke ID pengguna (misalnya dari tb_admin atau tb_customer)
+  `product_id` INT(11) NOT NULL,
+  `quantity` INT(11) NOT NULL DEFAULT 1,
+  `date_added` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+  `last_updated` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP(),
+  CONSTRAINT fk_cart_product FOREIGN KEY (`product_id`) REFERENCES `tb_product`(`product_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Indeks tambahan untuk performa (opsional, tapi disarankan)
+CREATE INDEX idx_cart_user_id ON `tb_cart_items` (`user_id`);
+CREATE INDEX idx_cart_product_id ON `tb_cart_items` (`product_id`);
+
 ALTER TABLE `tb_admin`
   ADD PRIMARY KEY (`admin_id`);
 

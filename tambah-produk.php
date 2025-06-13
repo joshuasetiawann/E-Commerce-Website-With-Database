@@ -118,7 +118,7 @@
 	<!-- footer -->
 	<footer>
 		<div class="container">
-			<small>Copyright &copy; 2025 - Joe Shop.</small>
+			<small>Copyright &copy; 2025 - Joshua Setiawan.</small>
 		</div>
 	</footer>
 	<script>
